@@ -98,6 +98,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+plugins+=(vi-mode docker kubectl git tmux zsh-autosuggestions zsh-syntax-highlighting)
+
+export EDITOR='vim'
+ 
+alias tmk="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}"
+clean()
+{
+  find . \( -name '.DS_Store' -or -name '._*' \) -delete
+}
+
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -v
 bindkey '^ ' autosuggest-accept

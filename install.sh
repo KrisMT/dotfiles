@@ -42,33 +42,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ### Install auto suggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-### Change theme to 'spaceship'
-cat << 'EOF' >> ~/.zshrc
-ZSH_THEME="spaceship"
-EOF
-
 ######################
 ### TMUX
 sudo apt-get install tmux -y
 
 cp -rf tmux.conf ~/.tmux.conf
-
-##############################
-### Make command for kill TMUX
-cat << 'EOF' >> ~/.zshrc
-
-plugins+=(vi-mode docker kubectl git tmux zsh-autosuggestions zsh-syntax-highlighting)
-
-export EDITOR='vim'
- 
-alias tmk="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}"
-clean()
-{
-  find . \( -name '.DS_Store' -or -name '._*' \) -delete
-}
-
-bindkey -M viins 'jj' vi-cmd-mode
-bindkey -v
-bindkey '^ ' autosuggest-accept
-
-EOF
