@@ -19,11 +19,17 @@ sudo apt-get install vim -y
 # copy vimrc configuration file
 cp -rf vimrc ~/.vimrc
 
+sudo apt install curl  -y
+
 # install all plugin
 vim +PlugInstall +qall
+vim +PlugInstall +qall
+
+mkdir -p ~/.vim
+
 
 # copy snippets to directory
-cp -rf UltiSnips ~/.vim/bundle/vim-snippets
+#cp -rf UltiSnips ~/.vim/bundle/vim-snippets
 
 ######################
 ### Install oh-my-zsh
