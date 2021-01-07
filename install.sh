@@ -11,25 +11,6 @@ sudo apt-get install zsh -y
 sudo apt-get install git -y
 cp -rf gitconfig ~/.gitconfig
 
-################################
-### VIM Bundle and configuration
-# install
-sudo apt-get install vim -y
-
-# copy vimrc configuration file
-cp -rf vimrc ~/.vimrc
-
-sudo apt install curl  -y
-
-# install all plugin
-vim +PlugInstall +qall
-vim +PlugInstall +qall
-
-mkdir -p ~/.vim
-
-
-# copy snippets to directory
-#cp -rf UltiSnips ~/.vim/bundle/vim-snippets
 
 ######################
 ### Install oh-my-zsh
@@ -53,3 +34,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sudo apt-get install tmux -y
 
 cp -rf tmux.conf ~/.tmux.conf
+
