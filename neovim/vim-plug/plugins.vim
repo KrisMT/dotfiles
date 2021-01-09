@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
     " Track the engine.
-    Plug 'SirVer/ultisnips'
+    "Plug 'SirVer/ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
@@ -26,11 +26,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-"    " Better Syntax Support
-"    Plug 'sheerun/vim-polyglot'
-"    " File Explorer
-"    Plug 'scrooloose/NERDTree'
-"    " Auto pairs for '(' '[' '{'
-"    Plug 'jiangmiao/auto-pairs'
+    " Comment which <space>/
+    Plug 'tpope/vim-commentary'
+
+    " Better Syntax Support
+    Plug 'sheerun/vim-polyglot'
+    " File Explorer
+    Plug 'scrooloose/NERDTree'
+    " Auto pairs for '(' '[' '{'
+    Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

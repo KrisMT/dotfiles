@@ -27,5 +27,5 @@ cp -rf ./neovim/plug-config ~/.config/nvim
 nvim +PlugInstall +qall
 nvim +PlugUpdate +qall
 
-nvim -c 'CocInstall -sync coc-json coc-python coc-snippets coc-vimlsp'
+nvim -c 'CocInstall -sync coc-json coc-python coc-snippets coc-vimlsp coc-explorer'
 cp -rf ./neovim/coc-settings.json ~/.config/nvim

@@ -17,9 +17,9 @@ inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
 
 " TAB in general mode will move to text buffer
-"nnoremap <TAB> :bnext<CR>
+nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
-"nnoremap <S-TAB> :bprevious<CR>
+nnoremap <S-TAB> :bprevious<CR>
 
 " ============================
 " Snippets key mapping
@@ -63,8 +63,6 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-
-
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -77,3 +75,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Commentary key mappping
+nnoremap <space>/ :Commentary<CR>
+vnoremap <space>/ :Commentary<CR>
