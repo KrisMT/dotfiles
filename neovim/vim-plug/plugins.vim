@@ -29,6 +29,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Comment which <space>/
     Plug 'tpope/vim-commentary'
 
+    " Git integration
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
+
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
