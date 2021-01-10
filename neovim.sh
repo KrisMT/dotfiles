@@ -29,3 +29,6 @@ nvim +PlugUpdate +qall
 
 nvim -c 'CocInstall -sync coc-json coc-python coc-snippets coc-vimlsp coc-explorer'
 cp -rf ./neovim/coc-settings.json ~/.config/nvim
+
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLo "Fira Code Regular Nerd Font Complete.otf" 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraMono/Regular/complete/Fura%20Mono%20Regular%20Nerd%20Font%20Complete.otf' 
