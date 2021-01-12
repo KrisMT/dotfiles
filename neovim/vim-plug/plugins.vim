@@ -17,9 +17,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Keeping up to date with master
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
-    " Track the engine.
-    "Plug 'SirVer/ultisnips'
-
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
 
@@ -34,6 +31,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+
+    " ranger
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
