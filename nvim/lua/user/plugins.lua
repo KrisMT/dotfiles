@@ -9,10 +9,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
 ]])
 
 -- Use a protected call so we don't error out on first use
@@ -54,9 +54,14 @@ return packer.startup(function(use)
     },
     config = get_setup("telescope"),
   })
-  use({
-    "hrsh7th/nvim-cmp",
-  })
+
+--  use({
+--    "hrsh7th/nvim-cmp",
+--    requires = {
+--      "dcampos/cmp-snippy",
+--    },
+--    config = get_setup("cmp"),
+--  })
 
   -- LuaLine
   use({
@@ -66,29 +71,39 @@ return packer.startup(function(use)
   })
 
   --use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
-  use({
-    "numToStr/Comment.nvim",
-    opt = true,
-    keys = { "gc", "gcc" },
-    config = get_setup("comment"),
-  })
-  use({ "tpope/vim-repeat" })
-  use({ "tpope/vim-surround" })
-  use({
-    "phaazon/hop.nvim",
-    event = "BufReadPre",
-    config = get_setup("hop"),
-  })
+
+
+--  use({
+--    "numToStr/Comment.nvim",
+--    opt = true,
+--    keys = { "gc", "gcc" },
+--    config = get_setup("comment"),
+--  })
+
+
+  -- code snippet
+--  use({ "tpope/vim-repeat" })
+--  use({ "tpope/vim-surround" })
+  use({ "honza/vim-snippets" })
+  use({ "dcampos/nvim-snippy", config = get_setup("snippy") })
+
+--  -- hop
+--  use({
+--    "phaazon/hop.nvim",
+--    event = "BufReadPre",
+--    config = get_setup("hop"),
+--  })
+
   --
-  -- 
+  -- colorscheme
   --
   use({ "EdenEast/nightfox.nvim", config = get_setup("nightfox") })
   use({ "kyazdani42/nvim-web-devicons" })
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    config = get_setup("treesitter"),
-    run = ":TSUpdate",
-  })
+--  use({
+--    "nvim-treesitter/nvim-treesitter",
+--    config = get_setup("treesitter"),
+--    run = ":TSUpdate",
+--  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
