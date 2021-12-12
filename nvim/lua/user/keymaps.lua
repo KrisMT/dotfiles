@@ -69,9 +69,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("c", "<C-j>",  'pumvisible() ? "\\<C-n>" : "\\<C-j>"', { expr = true, noremap = true } )
 keymap("c", "<C-k>",  'pumvisible() ? "\\<C-p>" : "\\<C-k>"', { expr = true, noremap = true } )
 
---After searching, pressing escape stops the highlight
-keymap("n", "<esc>", ":noh<cr><esc>", { silent = true })
-
 -- Plugins --
 -- Telescope
 keymap("n", "<Leader>1", ":Telescope sessions [save_current=true]<CR>", term_opts)

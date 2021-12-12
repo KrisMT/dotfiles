@@ -9,10 +9,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost plugins.lua source <afile> | PackerSync
+augroup end
 ]])
 
 -- Use a protected call so we don't error out on first use
@@ -51,6 +51,7 @@ return packer.startup(function(use)
     requires = {
       { "nvim-lua/popup.nvim" },
       { "nvim-lua/plenary.nvim" },
+      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     },
     config = get_setup("telescope"),
   })
@@ -58,7 +59,10 @@ return packer.startup(function(use)
   use({
     "hrsh7th/nvim-cmp",
     requires = {
-      "dcampos/cmp-snippy",
+      { "dcampos/cmp-snippy" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "hrsh7th/cmp-cmdline" },
     },
     config = get_setup("cmp"),
   })
@@ -72,29 +76,35 @@ return packer.startup(function(use)
 
   --use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
 
---  use({
---    "numToStr/Comment.nvim",
---    opt = true,
---    keys = { "gc", "gcc" },
---    config = get_setup("comment"),
---  })
+  use({
+    "numToStr/Comment.nvim",
+    opt = true,
+    keys = { "gc", "gcc" },
+    config = get_setup("comment"),
+  })
 
   -- code snippet
---  use({ "tpope/vim-repeat" })
---  use({ "tpope/vim-surround" })
+  use({ "tpope/vim-repeat" })
+  use({ "tpope/vim-surround" })
   use({ "honza/vim-snippets" })
   use({ "dcampos/nvim-snippy", config = get_setup("snippy") })
+  use({
+    "windwp/nvim-autopairs",
+    after = "nvim-cmp",
+    config = get_setup("autopairs"),
+  })
+  use("p00f/nvim-ts-rainbow")
 
   --
   -- colorscheme
   --
   use({ "EdenEast/nightfox.nvim", config = get_setup("nightfox") })
   use({ "kyazdani42/nvim-web-devicons" })
---  use({
---    "nvim-treesitter/nvim-treesitter",
---    config = get_setup("treesitter"),
---    run = ":TSUpdate",
---  })
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    config = get_setup("treesitter"),
+    run = ":TSUpdate",
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
