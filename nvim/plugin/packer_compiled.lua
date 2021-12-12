@@ -103,6 +103,12 @@ _G.packer_plugins = {
     path = "/home/krismt/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-treesitter"] = {
+    config = { 'require("setup/treesitter")' },
+    loaded = true,
+    path = "/home/krismt/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/krismt/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -173,6 +179,10 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require("setup/lualine")

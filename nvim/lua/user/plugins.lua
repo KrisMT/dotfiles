@@ -84,6 +84,11 @@ return packer.startup(function(use)
   --
   use({ "EdenEast/nightfox.nvim", config = get_setup("nightfox") })
   use({ "kyazdani42/nvim-web-devicons" })
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    config = get_setup("treesitter"),
+    run = ":TSUpdate",
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

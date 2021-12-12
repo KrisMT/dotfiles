@@ -35,3 +35,4 @@ sudo apt-get install tmux -y
 
 cp -rf tmux.conf ~/.tmux.conf
 
+sudo apt install -y gcc g++

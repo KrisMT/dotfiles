@@ -13,3 +13,7 @@ sudo apt install -y neovim
 ### Make a neovim config directory
 mkdir ~/.config
 cp -r ./nvim ~/.config
+
+nvim +PackerInstall +qall
+nvim +PackerUpdate +qall
+nvim +PackerSync +qall
