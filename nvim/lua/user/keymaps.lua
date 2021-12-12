@@ -95,8 +95,3 @@ keymap("v", "<leader>cn", '<cmd>lua require("renamer").rename()<cr>', { noremap 
 
 keymap("n", "<leader>ci", "<cmd> lua vim.diagnostic.open_float()<cr>", term_opts)
 
--- Hop
-keymap("n", "h", "<cmd>lua require'hop'.hint_words()<cr>", term_opts)
-keymap("n", "l", "<cmd>lua require'hop'.hint_lines()<cr>", term_opts)
-keymap("v", "h", "<cmd>lua require'hop'.hint_words()<cr>", term_opts)
-keymap("v", "l", "<cmd>lua require'hop'.hint_lines()<cr>", term_opts)

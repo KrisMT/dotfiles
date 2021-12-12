@@ -55,13 +55,13 @@ return packer.startup(function(use)
     config = get_setup("telescope"),
   })
 
---  use({
---    "hrsh7th/nvim-cmp",
---    requires = {
---      "dcampos/cmp-snippy",
---    },
---    config = get_setup("cmp"),
---  })
+  use({
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "dcampos/cmp-snippy",
+    },
+    config = get_setup("cmp"),
+  })
 
   -- LuaLine
   use({
@@ -72,7 +72,6 @@ return packer.startup(function(use)
 
   --use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
 
-
 --  use({
 --    "numToStr/Comment.nvim",
 --    opt = true,
@@ -80,19 +79,11 @@ return packer.startup(function(use)
 --    config = get_setup("comment"),
 --  })
 
-
   -- code snippet
 --  use({ "tpope/vim-repeat" })
 --  use({ "tpope/vim-surround" })
   use({ "honza/vim-snippets" })
   use({ "dcampos/nvim-snippy", config = get_setup("snippy") })
-
---  -- hop
---  use({
---    "phaazon/hop.nvim",
---    event = "BufReadPre",
---    config = get_setup("hop"),
---  })
 
   --
   -- colorscheme
