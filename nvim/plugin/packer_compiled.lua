@@ -78,6 +78,11 @@ _G.packer_plugins = {
     path = "/home/krismt/.local/share/nvim/site/pack/packer/opt/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["ayu-vim"] = {
+    loaded = true,
+    path = "/home/krismt/.local/share/nvim/site/pack/packer/start/ayu-vim",
+    url = "https://github.com/ayu-theme/ayu-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/krismt/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -97,6 +102,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/krismt/.local/share/nvim/site/pack/packer/start/cmp-snippy",
     url = "https://github.com/dcampos/cmp-snippy"
+  },
+  flattened = {
+    loaded = true,
+    path = "/home/krismt/.local/share/nvim/site/pack/packer/start/flattened",
+    url = "https://github.com/romainl/flattened"
   },
   ["lualine.nvim"] = {
     config = { 'require("setup/lualine")' },
@@ -159,11 +169,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/krismt/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["telescope-fzf-native.nvim"] = {
-    loaded = true,
-    path = "/home/krismt/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
-    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     commands = { "Telescope" },

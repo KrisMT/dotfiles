@@ -51,7 +51,7 @@ return packer.startup(function(use)
     requires = {
       { "nvim-lua/popup.nvim" },
       { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+      --{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     },
     config = get_setup("telescope"),
   })
@@ -100,6 +100,9 @@ return packer.startup(function(use)
   --
   use({ "EdenEast/nightfox.nvim", config = get_setup("nightfox") })
   use({ "kyazdani42/nvim-web-devicons" })
+  use({ "ayu-theme/ayu-vim" })
+  use({ "romainl/flattened" })
+
   use({
     "nvim-treesitter/nvim-treesitter",
     config = get_setup("treesitter"),
