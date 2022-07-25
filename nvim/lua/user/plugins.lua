@@ -98,7 +98,7 @@ return packer.startup(function(use)
   --
   -- colorscheme
   --
-  use({ "EdenEast/nightfox.nvim", config = get_setup("nightfox") })
+  use({ "EdenEast/nightfox.nvim"})
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "ayu-theme/ayu-vim" })
   use({ "romainl/flattened" })
