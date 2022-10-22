@@ -17,3 +17,7 @@ cp -r ./nvim ~/.config
 nvim +PackerInstall +qall
 nvim +PackerUpdate +qall
 nvim +PackerSync +qall
+
+nvim +PackerInstall +qall
+nvim +PackerUpdate +qall
+nvim +PackerSync +qall

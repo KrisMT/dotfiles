@@ -111,3 +111,6 @@ clean()
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -v
 bindkey '^ ' autosuggest-accept
+
+# starship
+eval "$(starship init zsh)"

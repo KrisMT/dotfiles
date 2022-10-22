@@ -17,11 +17,6 @@ cp -rf gitconfig ~/.gitconfig
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ######################
-### Install spaceship for oh-my-zsh
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -sf "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-######################
 ### Install syntax highlight
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
@@ -35,4 +30,10 @@ sudo apt-get install tmux -y
 
 cp -rf tmux.conf ~/.tmux.conf
 
-sudo apt install -y gcc g++
+######################
+### Star ship
+curl -sS https://starship.rs/install.sh | sh
+mkdir -p ~/.config && touch ~/.config/starship.toml
+cp -rf starship.toml ~/.config/starship.toml 
+
+cp -rf zshrc ~/.zshrc
