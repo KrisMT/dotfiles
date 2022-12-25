@@ -9,6 +9,7 @@ sudo apt-get install zsh -y
 #########################
 ### Git and configuration
 sudo apt-get install git -y
+sudo apt-get install curl -y
 cp -rf gitconfig ~/.gitconfig
 
 
