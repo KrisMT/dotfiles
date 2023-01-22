@@ -91,7 +91,7 @@ return {
 
           wk.register({
             h = {
-              name = "Gitsigns",
+              name = "GitSigns",
               s = { "<CMD>Gitsigns stage_hunk<CR>", "Stage Hunk" },
               r = { "<CMD>Gitsigns reset_hunk<CR>", "Reset Hunk" },
             },

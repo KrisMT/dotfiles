@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Keymap for use
 vim.g.mapleader = ' ' -- leader key is spacebar
+vim.keymap.set({"n", "v"}, "<C-b>", "<NOP>", { noremap = true }) -- unmapping <C-b> to NOP for tmux
 
 -- setup plugins
 require("lazy").setup("plugins")
